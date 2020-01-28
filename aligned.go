@@ -1,3 +1,7 @@
+// Package aligned provides functions to allocate cacheline-aligned variables,
+// with the additional guarantee that no other variables anywhere in the process
+// can use the same cacheline: this is mostly useful when using functions from
+// sync/atomic to minimize the probability of false sharing of cachelines.
 package aligned
 
 import (
